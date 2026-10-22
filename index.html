@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Annisa Mawardi — AI-Assisted Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#faf9f6;--surface:#fff;--ink:#16181d;--mute:#5f6571;--line:#e5e2db;--accent:#2f5d50;--accent-soft:#e6efeb;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#121413;--surface:#1a1d1c;--ink:#eeeeea;--mute:#a1a7a4;--line:#2b2f2d;--accent:#7fc4ae;--accent-soft:#1d2a26;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#121413;--surface:#1a1d1c;--ink:#eeeeea;--mute:#a1a7a4;--line:#2b2f2d;--accent:#7fc4ae;--accent-soft:#1d2a26;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+h1,h2,h3{font-family:Fraunces,Georgia,"Times New Roman",serif;font-weight:500;line-height:1.15;margin:0;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+section{padding:96px 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:14px}
+h2{font-size:clamp(28px,4vw,40px);margin-bottom:28px}
+.lead{color:var(--mute);max-width:640px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:Fraunces,Georgia,serif;font-size:18px;text-decoration:none}
+nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font-size:14px;color:var(--mute);transition:color .2s}
+nav a:hover{color:var(--ink)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 12px;font:inherit;font-size:14px;cursor:pointer}
+@media(max-width:720px){.menu-btn{display:block}nav ul{display:none;position:absolute;left:0;right:0;top:60px;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line);padding:8px 24px}nav ul.open{display:flex}nav li a{display:block;padding:12px 0}}
+.hero{padding:120px 0 104px;border:0}
+.hero h1{font-size:clamp(38px,7vw,68px);max-width:14em}
+.hero p.lead{margin:26px 0 36px;font-size:18px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 22px;border-radius:999px;font-size:15px;font-weight:500;text-decoration:none;border:1px solid var(--ink);transition:transform .2s,background .2s}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{transform:translateY(-2px)}
+.tags{margin-top:44px;color:var(--mute);font-size:13px;letter-spacing:.04em}
+.grid{display:grid;gap:20px}
+.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:860px){.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.g3,.g2{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:26px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.card h3{font-size:19px;margin-bottom:10px}
+.card p{color:var(--mute);font-size:15px}
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:56px}
+@media(max-width:800px){.about{grid-template-columns:1fr;gap:32px}}
+.about p+p{margin-top:16px}
+.formula{border-left:2px solid var(--accent);padding-left:18px;font-family:Fraunces,Georgia,serif;font-size:21px;line-height:1.4;margin-top:8px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{font-size:13px;padding:5px 12px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:500}
+.label{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:999px;margin-bottom:14px}
+.feat{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:clamp(24px,5vw,48px);margin-bottom:24px}
+.feat h3{font-size:clamp(26px,4vw,36px);margin-bottom:14px}
+.feat ul{columns:2;gap:32px;padding-left:18px;color:var(--mute);margin:20px 0}
+@media(max-width:600px){.feat ul{columns:1}}
+.note{font-size:14px;color:var(--mute);border:1px dashed var(--line);border-radius:12px;padding:14px 16px;margin-top:18px}
+.accuracy{font-size:14px;margin-top:16px;padding:14px 16px;background:var(--accent-soft);border-radius:12px}
+.toggle{margin-top:24px;cursor:pointer;font:inherit}
+.case{display:none;margin-top:36px;border-top:1px solid var(--line);padding-top:32px}
+.case.open{display:block}
+.case h4{font-family:Fraunces,Georgia,serif;font-weight:500;font-size:21px;margin:28px 0 10px}
+.case p,.case li{color:var(--mute)}
+.flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:14px 0;font-size:14px;font-weight:500}
+.flow span{padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--bg)}
+.flow i{color:var(--accent);font-style:normal}
+.shots{display:grid;gap:20px;grid-template-columns:repeat(2,1fr);margin-top:28px}
+@media(max-width:760px){.shots{grid-template-columns:1fr}}
+figure{margin:0}
+.ph{aspect-ratio:16/10;border:1px dashed var(--line);border-radius:12px;background:repeating-linear-gradient(135deg,var(--bg),var(--bg) 12px,var(--accent-soft) 12px,var(--accent-soft) 24px);display:flex;align-items:center;justify-content:center;text-align:center;padding:12px;font-size:13px;color:var(--mute);overflow:hidden}
+figure img{width:100%;height:auto;display:block;border-radius:12px;border:1px solid var(--line)}
+figcaption{font-size:14px;margin-top:10px;font-weight:500}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media(max-width:860px){.steps{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.steps{grid-template-columns:1fr}}
+.step .n{font-family:Fraunces,Georgia,serif;font-size:30px;color:var(--accent)}
+.models{margin-top:36px}
+.models h3{font-size:22px;margin-bottom:6px}
+.eval{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:32px}
+@media(max-width:700px){.eval{grid-template-columns:repeat(2,1fr)}}
+.eval div{border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:15px;font-weight:500;background:var(--surface)}
+.ex{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--surface)}
+@media(max-width:700px){.ex{grid-template-columns:1fr}}
+.ex div{padding:22px;border-right:1px solid var(--line)}
+.ex div:last-child{border:0}
+@media(max-width:700px){.ex div{border-right:0;border-bottom:1px solid var(--line)}}
+.ex b{display:block;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.ex p{font-size:15px;color:var(--mute)}
+.tech{display:flex;flex-wrap:wrap;gap:10px}
+.tech span{padding:9px 16px;border:1px solid var(--line);border-radius:10px;background:var(--surface);font-size:15px}
+.edu h3{font-size:22px;margin-bottom:8px}
+.ph-inline{background:var(--accent-soft);padding:2px 8px;border-radius:6px;font-size:14px;color:var(--accent)}
+.contact{text-align:left}
+.contact h2{font-size:clamp(34px,6vw,56px)}
+.links{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.links span{padding:12px 20px;border:1px solid var(--line);border-radius:999px;background:var(--surface)}
+footer{padding:32px 0 40px;border-top:1px solid var(--line);color:var(--mute);font-size:13px}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#top" data-go="top">Annisa Mawardi</a>
+<button class="menu-btn" id="mb" aria-expanded="false" aria-controls="menu">Menu</button>
+<nav aria-label="Main"><ul id="menu">
+<li><a href="#about" data-go="about">About</a></li><li><a href="#projects" data-go="projects">Projects</a></li><li><a href="#workflow" data-go="workflow">Workflow</a></li><li><a href="#skills" data-go="skills">Skills</a></li><li><a href="#contact" data-go="contact">Contact</a></li>
+</ul></nav></div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+<p class="eyebrow">AI-Assisted Developer · AI Evaluation · Product QA · B2B Research</p>
+<h1>I build, evaluate, and refine AI-assisted digital products.</h1>
+<p class="lead">Combining structured prompting, frontend development, business logic, and iterative product QA to turn ideas into usable digital products.</p>
+<div class="btns"><a class="btn primary" href="#projects" data-go="projects">View Projects</a><a class="btn" href="#workflow" data-go="workflow">About My Workflow</a></div>
+</div></section>
+
+<section id="about"><div class="wrap about rv">
+<div><p class="eyebrow">About</p><h2>About Me</h2>
+<p>I come from an Economics background and built my hands-on experience in AI-assisted web development through real projects. I use AI coding tools to move faster, but I review, test, debug, and refine what they produce until it matches the requirement.</p>
+<p>My Economics studies gave me exposure to econometrics, statistics, quantitative analysis, economic modeling, and business analysis. Practical export-import and B2B research experience shaped how I think about buyers, suppliers, and evidence.</p></div>
+<div><p class="formula">Business Requirements + AI + Product Development + Evaluation</p>
+<div class="chips"><span class="chip">Econometrics</span><span class="chip">Statistics</span><span class="chip">Quantitative Analysis</span><span class="chip">Economic Modeling</span><span class="chip">Business Analysis</span></div></div>
+</div></section>
+
+<section><div class="wrap rv"><p class="eyebrow">Capabilities</p><h2>What I Do</h2>
+<div class="grid g3">
+<div class="card"><h3>AI-Assisted Development</h3><p>Using AI coding tools to accelerate frontend and product development while independently reviewing and refining the generated implementation.</p></div>
+<div class="card"><h3>Prompt Engineering</h3><p>Turning ambiguous requirements and product ideas into structured instructions for AI models.</p></div>
+<div class="card"><h3>AI Output Evaluation</h3><p>Identifying hallucinations, unsupported claims, incorrect classifications, weak reasoning, and instruction-following problems.</p></div>
+<div class="card"><h3>Product QA</h3><p>Testing interfaces, business logic, edge cases, and user flows against intended requirements.</p></div>
+<div class="card"><h3>B2B Research</h3><p>Researching international buyers, suppliers, markets, product requirements, and commercial information.</p></div>
+<div class="card"><h3>Frontend Development</h3><p>Building responsive web interfaces using modern frontend technologies and AI-assisted coding workflows.</p></div>
+</div></div></section>
+
+<section id="projects"><div class="wrap"><p class="eyebrow">Selected Work</p><h2>Projects</h2>
+
+<article class="feat rv">
+<span class="label">Private Project · In Development</span>
+<h3>B2B Buyer Intelligence Platform</h3>
+<p class="lead">A B2B buyer discovery and qualification platform designed around the real-world problem of finding relevant international buyers for export products.</p>
+<ul><li>Buyer discovery</li><li>Company classification</li><li>Evidence extraction</li><li>Buyer scoring</li><li>Qualification tiers</li><li>Country analysis</li><li>Contact enrichment</li><li>Buyer management</li><li>Outreach pipeline</li></ul>
+<p class="accuracy"><b>Project focus:</b> a private buyer research and qualification platform designed to help turn broad web research into more useful export prospecting. The development was AI-assisted, with the product and business requirements defined and refined through iterative testing.</p>
+<button class="btn toggle" id="ct" aria-expanded="false" aria-controls="case">Read the case study</button>
+
+<div class="case" id="case">
+<h4>The Problem</h4>
+<p>Finding international B2B buyers is more complicated than simply searching for companies. Public search results can contain relevant prospects alongside suppliers, marketplaces, directories, and low-confidence results. The product was designed to add a qualification layer before prospects are considered for outreach.</p>
+<h4>The Approach</h4>
+<p>The platform combines web research with a structured qualification workflow that evaluates relevance and supporting evidence before helping prioritize prospects. The exact search, qualification, and prioritization rules are intentionally kept private.</p>
+<h4>Product Capabilities</h4>
+<div class="chips" style="margin-top:0"><span class="chip">Buyer Discovery</span><span class="chip">Prospect Qualification</span><span class="chip">Evidence Review</span><span class="chip">Prioritization</span><span class="chip">Market Analysis</span><span class="chip">Contact Enrichment</span><span class="chip">Pipeline Management</span></div>
+<h4>What I Focused On</h4>
+<p>Designing a practical workflow for separating useful prospects from noisy search results, handling uncertain cases, and presenting information in a way that supports human review and outreach decisions.</p>
+<h4>Quality &amp; Evaluation</h4>
+<p>The project required repeated testing of relevance, evidence quality, edge cases, and instruction-following. Implementation details, internal rules, thresholds, and data-processing methods are intentionally not disclosed in this public portfolio.</p>
+</div>
+
+<div class="shots">
+<figure><div class="ph">Replace with screenshot: assets/b2b-dashboard.png</div><figcaption>Buyer Intelligence Dashboard</figcaption></figure>
+<figure><div class="ph">Replace with screenshot: assets/b2b-discovery.png</div><figcaption>Buyer Discovery &amp; Search</figcaption></figure>
+<figure><div class="ph">Replace with screenshot: assets/b2b-evidence.png</div><figcaption>Buyer Qualification &amp; Evidence</figcaption></figure>
+<figure><div class="ph">Replace with screenshot: assets/b2b-pipeline.png</div><figcaption>Buyer Pipeline</figcaption></figure>
+</div>
+<p class="note">Private project. Screenshots are presented for portfolio demonstration purposes. Sensitive company and buyer information may be anonymized.</p>
+</article>
+
+<article class="card rv" style="padding: clamp(24px, 4vw, 36px);"><span class="label">Private Client Project · Completed</span>
+<h3>Export Supplier Company Website</h3>
+<p class="lead" style="font-size: 16px; margin-bottom: 16px;">Designed and developed a responsive company website for an international export trading business using an AI-assisted frontend workflow.</p>
+<ul style="color:var(--mute);font-size:15px;padding-left:18px;margin-bottom:24px"><li>Translated business requirements into structured website architecture</li><li>Utilized AI tools for initial UI/UX boilerplate and frontend component code</li><li>Manually reviewed, debugged, and refined code for cross-browser reliability</li><li>Optimized layout, visual hierarchy, typography, and product showcase assets</li><li>Performed end-to-end responsiveness testing and performance QA</li></ul>
+<div class="ph">Replace with screenshot: assets/company-website.png</div></article>
+
+</div></section>
+
+<section id="workflow"><div class="wrap rv"><p class="eyebrow">Workflow</p><h2>How I Work With AI</h2>
+<div class="steps">
+<div class="card step"><div class="n">01</div><h3>Understand</h3><p>Requirements and business context</p></div>
+<div class="card step"><div class="n">02</div><h3>Structure</h3><p>Turn requirements into precise prompts</p></div>
+<div class="card step"><div class="n">03</div><h3>Build</h3><p>Use AI coding tools to accelerate implementation</p></div>
+<div class="card step"><div class="n">04</div><h3>Evaluate</h3><p>Inspect the generated output critically</p></div>
+<div class="card step"><div class="n">05</div><h3>Refine</h3><p>Debug, modify, and iterate</p></div>
+<div class="card step"><div class="n">06</div><h3>Validate</h3><p>Check the final result against the original requirements</p></div>
+</div>
+<div class="models"><p class="lead" style="margin-bottom:20px">I use different models for different parts of the workflow. This is simply my personal setup, not a ranking of the tools.</p>
+<div class="grid g3">
+<div class="card"><h3>GPT</h3><p>Requirement analysis, prompt structuring, reasoning, and evaluation criteria.</p></div>
+<div class="card"><h3>Claude</h3><p>Frontend implementation and UI development.</p></div>
+<div class="card"><h3>Gemini</h3><p>Alternative review, debugging, and refinement.</p></div>
+</div></div>
+
+<h2 style="margin-top:80px;font-size:clamp(24px,3.5vw,32px)">What I Look For When Evaluating AI Output</h2>
+<div class="eval"><div>Instruction Following</div><div>Factual Accuracy</div><div>Hallucination</div><div>Evidence Quality</div><div>Business Logic</div><div>Edge Cases</div><div>Relevance</div><div>UX / Usability</div><div>Code Quality</div></div>
+<div class="ex"><div><b>Problem</b><p>An AI-generated result does not match the intended business requirement.</p></div><div><b>Evaluation</b><p>Identify the unsupported assumption, missing evidence, or instruction-following issue.</p></div><div><b>Refinement</b><p>Clarify the requirement, improve the evaluation criteria, and test the revised output against edge cases.</p></div></div>
+</div></section>
+
+<section id="skills"><div class="wrap rv"><p class="eyebrow">Skills</p><h2>Technology</h2>
+<div class="tech"><span>Next.js</span><span>React</span><span>TypeScript</span><span>JavaScript</span><span>Tailwind CSS</span><span>PostgreSQL</span><span>Drizzle ORM</span><span>REST / Web APIs</span><span>Git / GitHub</span><span>Claude</span><span>GPT</span><span>Gemini</span></div>
+<div class="edu" style="margin-top:64px"><p class="eyebrow">Education</p><h3>Bachelor’s Degree in Economics</h3>
+<p class="lead"><span class="ph-inline">[University name]</span> · <span class="ph-inline">[Graduation year]</span></p>
+<div class="chips"><span class="chip">Econometrics</span><span class="chip">Statistics</span><span class="chip">Quantitative Analysis</span><span class="chip">Economic Modeling</span><span class="chip">Data Analysis</span></div></div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap rv"><p class="eyebrow">Contact</p><h2>Let’s build something useful.</h2>
+<p class="lead">Open to conversations about AI evaluation, AI-assisted development, product QA, and B2B research work.</p>
+<div class="links"><span class="ph-inline">[Email]</span><span class="ph-inline">[LinkedIn]</span><span class="ph-inline">[GitHub]</span></div>
+</div></section>
+</main>
+<footer><div class="wrap">© Annisa Mawardi</div></footer>
+
+<script>
+(function(){
+var menu=document.getElementById('menu'),mb=document.getElementById('mb');
+mb.addEventListener('click',function(){var o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
+document.querySelectorAll('[data-go]').forEach(function(a){a.addEventListener('click',function(e){
+e.preventDefault();var t=document.getElementById(a.dataset.go);if(t)t.scrollIntoView({behavior:'smooth'});menu.classList.remove('open');mb.setAttribute('aria-expanded','false')})});
+var ct=document.getElementById('ct'),cs=document.getElementById('case');
+ct.addEventListener('click',function(){var o=cs.classList.toggle('open');ct.setAttribute('aria-expanded',o);ct.textContent=o?'Hide the case study':'Read the case study'});
+var els=document.querySelectorAll('.rv');
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.08});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+})();
+</script>
+</body>
+</html>
